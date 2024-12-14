@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Samuel Santos">
+    <meta name="Description" content="DESCRIÇÃO DO PROJETO">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <title>Loading - CSS</title>
+    <style>
+        :root {
+            /* Colors */
+            --primary-color: #d25b2e;
+            --light-color: #f0f0f0;
+            --dark-color: #1c1e24;
+            /* Fonts */
+            --font-family: "Plus Jakarta Sans", sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 1.8rem;
+            font-family: var(--font-family);
+        }
+
+        h1 {
+            margin: 10px;
+            text-align: center;
+        }
+
+        hr {
+            margin: 0 20px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .area {
+            display: flex;
+        }
+
+        .area .loading,
+        .area .loading2,
+        .area .loading3,
+        .area .loading4 {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border: 15px solid var(--light-color);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .area .loading {
+            animation: spin 2s linear infinite;
+        }
+
+        .area .loading2 {
+            animation: spin 2s ease infinite;
+        }
+
+        .area .loading3 {
+            animation: spin 2s ease reverse infinite;
+        }
+
+        .area .loading4 {
+            animation: spin 2s linear reverse infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Loading - CSS</h1>
+    <hr>
+    <div class="area">
+        <div class="loading"></div>
+        <div class="loading2"></div>
+        <div class="loading3"></div>
+        <div class="loading4"></div>
+    </div>
+    <hr>
+</body>
+
+</html>
